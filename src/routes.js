@@ -14,5 +14,7 @@ routes.get('/', (request, response) => {
 routes.post('/autenticacao', AutenticacaoController.store);
 
 routes.get("/lista-produto", auth, ListaProdutoController.index);
+routes.post("/lista-produto", auth, ListaProdutoController.store);
+routes.delete("/lista-produto/:id", auth, ListaProdutoController.delete);
 
 export default routes;
