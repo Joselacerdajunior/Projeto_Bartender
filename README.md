@@ -7,6 +7,8 @@
 
 Para iniciar o servidor utilize o comando (dentro da pasta da API):
 ->        npm run dev
+ou para executar em modo debuger:
+->        npm run dev:debug
 
 
 Para criar uma nova tabela utilizando o knex utilize o comando (dentro da pasta da API):
