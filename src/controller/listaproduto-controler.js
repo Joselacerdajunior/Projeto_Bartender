@@ -36,6 +36,19 @@ class ListaProdutoController {
 
         return response.status(204).json({ mensagem: "Item da lista deletada com sucesso!" })
     }
+
+    async update(request, response) {
+        const { id } = request.params;
+        const { nome, descricao, valor, imagem } = request.body;
+
+        if(!id) {
+            return response.status(400).json({ mensagem: "ID não informada!" });
+        }
+
+        await ListaProdutoModel.atualizarProduto(id, nome, descricao, valor, imagem);
+
+        return response.status(204).json({ mensagem: "Item da lista atualido com sucesso!" })
+    }
 }
 
 export default new ListaProdutoController();

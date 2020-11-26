@@ -1,8 +1,8 @@
 class AutenticacaoController {
 
-    store(request, response) {
+    async store(request, response) {
         const { login, senha } = request.body;
-        
+
         if(login !== "unisal" || senha !== "unisal") {
             return response
             .status(401)
