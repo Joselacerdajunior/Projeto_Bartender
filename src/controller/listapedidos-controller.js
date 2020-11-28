@@ -19,8 +19,8 @@ class ListaPedidosController {
 
         const listaPedidosCriada = await ListaPedidosModel.salvarNovoPedido({
             num_comanda: comanda,
-            id_produto: id_produto,
-            quantidade: quantidade
+            id_produto,
+            quantidade
         });
 
         return response.status(201).json(listaPedidosCriada);

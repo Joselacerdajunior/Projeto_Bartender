@@ -14,7 +14,7 @@ class ListaProdutoModel {
     }
 
     async atualizarProduto(id, name, description, value, src_image) {
-        await db('lista_produtos').update({ name, description, value, src_image }).where({ id });
+        await db('lista_produtos').update({ name, description, value, src_image }).where({ id }).returning("*");
     }
 }
 
